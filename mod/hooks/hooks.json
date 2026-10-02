@@ -1,0 +1,4 @@
+{
+  "description": "Forwards every classic hook event to the notch-crab bridge and draws a reacting crab above the prompt.",
+  "modules": ["./register.mjs"]
+}

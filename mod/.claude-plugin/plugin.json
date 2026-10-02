@@ -1,0 +1,85 @@
+{
+  "name": "notch-crab",
+  "version": "0.2.13",
+  "description": "A pixel crab above your Claude Code prompt that acts out every hook (33 reactions). Thin bars beside him track the context window and your 5-hour and weekly limits. Works on its own. If the notch-crab Mac app (not released yet) is running, the mod also sends it each hook event's name, session id, tool name and ids, notification type and working directory, plus how many tools a batch ran, so the crab in your MacBook's notch reacts too. That goes over a local Unix socket and never includes prompts, tool inputs or outputs. The full list is in mod/hooks/wire.mjs.",
+  "author": {
+    "name": "Good Machines"
+  },
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "outfit": {
+      "type": "string",
+      "title": "Outfit (needs the notch-crab Mac app)",
+      "description": "\"wardrobe\" (default): the notch-crab Mac app (not released yet) dresses each session: the first live session gets the plain orange crab, the second a pink bow, the rest generated outfits. Without the app every session wears the plain crab. \"plain\": always the plain orange crab.",
+      "required": false,
+      "default": "wardrobe",
+      "options": [
+        "plain",
+        "wardrobe"
+      ]
+    },
+    "show": {
+      "type": "string",
+      "title": "Where the crab shows",
+      "description": "\"both\" (default): in the notch (when the notch-crab Mac app is running) and in a little bar above the prompt. \"notch\": only in the notch. \"prompt\": only above the prompt (the session stays off the notch).",
+      "required": false,
+      "default": "both",
+      "options": [
+        "both",
+        "notch",
+        "prompt"
+      ]
+    },
+    "hud": {
+      "type": "string",
+      "title": "Bars beside the crab",
+      "description": "\"on\" (default): thin bars beside the crab above the prompt, the ones turned on below: the context window (against auto-compact), the 5-hour and weekly usage limits, and the task list when there is one. \"off\": the crab alone, as before.",
+      "required": false,
+      "default": "on",
+      "options": [
+        "on",
+        "off"
+      ]
+    },
+    "hudContext": {
+      "type": "boolean",
+      "title": "Bar: context window",
+      "description": "The context window's fill, against auto-compact (CTX). Off: no context bar, and no auto-compact estimate is read.",
+      "required": false,
+      "default": true
+    },
+    "hudFiveHour": {
+      "type": "boolean",
+      "title": "Bar: 5-hour limit",
+      "description": "The 5-hour usage limit (5H), with its pace flag and reset time.",
+      "required": false,
+      "default": true
+    },
+    "hudWeekly": {
+      "type": "boolean",
+      "title": "Bar: weekly limit",
+      "description": "The weekly usage limit (7D), with its pace flag and reset time.",
+      "required": false,
+      "default": true
+    },
+    "hudTasks": {
+      "type": "boolean",
+      "title": "Bar: task list",
+      "description": "The task list's progress, shown while the session has a list (counts only, never the tasks' text). Off: the transcript is not read for it.",
+      "required": false,
+      "default": true
+    }
+  },
+  "homepage": "https://justinperea.com/lab/notch-crab",
+  "repository": "https://github.com/JustinPerea/notch-crab",
+  "keywords": [
+    "pixel-art",
+    "mascot",
+    "hud",
+    "status",
+    "usage-limits",
+    "context-window",
+    "mod"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "notch-crab",
+  "description": "A pixel crab above your Claude Code prompt.",
+  "owner": {
+    "name": "Good Machines",
+    "url": "https://justinperea.com/lab/notch-crab"
+  },
+  "plugins": [
+    {
+      "name": "notch-crab",
+      "source": "./mod",
+      "description": "A pixel crab above your Claude Code prompt that acts out every hook, with bars for your context window and usage limits.",
+      "homepage": "https://justinperea.com/lab/notch-crab",
+      "repository": "https://github.com/JustinPerea/notch-crab",
+      "license": "MIT",
+      "category": "fun"
+    }
+  ]
+}
