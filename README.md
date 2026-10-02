@@ -15,11 +15,15 @@ claude plugin marketplace add JustinPerea/notch-crab
 claude plugin install notch-crab@notch-crab
 ```
 
-Inside a Claude Code session you can do both at once with `/plugin install notch-crab --marketplace JustinPerea/notch-crab`. That opens the plugin panel, where you pick a scope.
+Or type these inside a Claude Code session:
 
-In the desktop app, add the marketplace from your shell first (the first command above). After that, install it from **+ > Plugins > Add plugin** in the Code tab.
+```
+/plugin marketplace add JustinPerea/notch-crab
+/plugin install notch-crab@notch-crab
+/reload-plugins
+```
 
-Sessions that are already open pick it up when their plugins reload. In a terminal session, run `/reload-plugins`.
+**Desktop app:** the Code tab uses the same plugins as Claude Code in your terminal, so the two shell commands above install it there too. Sessions that are already open pick it up when their plugins reload.
 
 notch-crab is a **mod**, a plugin that runs code inside Claude Code. Current Claude Code has mods on by default, both 2.1.287 in a terminal and the desktop app's own copy. Anthropic can still turn them off on its end. If that happens, the crab won't show.
 
